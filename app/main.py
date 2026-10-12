@@ -1,19 +1,11 @@
+def to_human_years(pet_age: int, extra_rate: int) -> int:
+    if pet_age >= 24:
+        return 2 + (pet_age - 24) // extra_rate
+    if pet_age >= 15:
+        return 1
+    return 0
+
 def get_human_age(cat_age: int, dog_age: int) -> list:
-
-    cat = 0
-    dog = 0
-    if cat_age >= 28:
-        cat = 2 + (cat_age - 24) // 4
-    elif cat_age >= 24:
-        cat = 2
-    elif cat_age >= 15:
-        cat = 1
-
-    if dog_age >= 29:
-        dog = 2 + (dog_age - 24) // 5
-    elif dog_age >= 24:
-        dog = 2
-    elif dog_age >= 15:
-        dog = 1
-
-    return [cat, dog]
+    cat_years = to_human_years(cat_age, 4)
+    dog_years = to_human_years(dog_age, 5)
+    return [cat_years, dog_years]
