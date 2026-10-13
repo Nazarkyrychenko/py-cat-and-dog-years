@@ -15,6 +15,7 @@ from app.main import get_human_age
         (28, 28, [3, 2]),
         (28, 29, [3, 3]),
         (100, 100, [21, 17]),
+        (-1, -5, [0, 0]),
     ],
     ids=[
         "0 cat/dog years should convert into 0 human age.",
@@ -26,6 +27,7 @@ from app.main import get_human_age
         "28/28 cat/dog years should convert into 3/2 human age.",
         "28/29 cat/dog years should convert into 3 human age.",
         "100 cat/dog years should convert into 21/17 human age.",
+        "Negative cat/dog years should convert into 0 human age.",
     ],
 
 )
